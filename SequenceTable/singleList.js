@@ -140,15 +140,19 @@ class singleList {
   isEmpty() {
     return (this.Length === 0)? true:false
   }
-
+  // 输出值
+  output() {
+    let result = ''
+    let tmp = this
+    for (let i=0;i<this.Length;i++) {
+      result = `${result} ${tmp.data}`
+      tmp = tmp.LinkNode
+    }
+    return result
+  }
 }
-// let a = new singleList(1);
-// a.next = {data: 2};
-// a.next = {data: 3};
-// a.next = {data: 4};
-// a.next = {data: 5};
-// let b = new singleList('a')
-// b.next = {data: 'b'};
-// b.next = {data: 'c'};
-// a.insert(2, b)
-// console.log(a)
+let a = new singleList(1);
+a.next = {data: 2};
+a.next = {data: 3};
+a.next = {data: 4};
+a.next = {data: 5};
